@@ -1,12 +1,31 @@
-let carName="Volvo"
-console.log(carName)
-let x = 50
-console.log(x)
+function nombreCompleto(a,b) {
+    return a +" "+b;
+}
+console.log(nombreCompleto('Luis','Lopez'))
 
-let a = 10
-let b = 5
-console.log(a+b)
+function permiso(a,b) {
+    if (b => 18) {
+        return a + " Eres mayor de edad"
+    }else{
+        return a + " Eres menor de edad"
+    }
+}
+console.log(permiso("Luis",21))
 
-let y = 20
-let z = x+y
-console.log(z)
+function promedio(a) {
+    let contador = 0
+    for (let i = 0; i < a.length; i++){
+
+        contador = contador + a[i]
+
+    }
+    let promedioTotal = 0
+    promedioTotal = contador / a.length
+    if (promedioTotal >=70){
+        return 'El grupo está aprobado con calificacion de ' + promedioTotal
+    }else{
+        return 'El grupo está reprobado con calificacion de ' + promedioTotal
+    }
+}
+let calificaciones = [70,80,90,100,85]
+console.log(promedio(calificaciones))
